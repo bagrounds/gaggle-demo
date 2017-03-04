@@ -1,7 +1,7 @@
 # [gaggle-demo](https://gitlab.com/bagrounds/gaggle-demo)
 
 Demo using [gaggle][gaggle-url] (an implementation of the [Raft][raft-url]
-algorithm) and socket.io for a fully distributed state machine
+algorithm) and [socket.io] for a fully distributed state machine
 
 # usage
 ```sh
@@ -41,13 +41,14 @@ The primary log statements consist of 4 sets of square brackets `[]` followed by
 
 * The first brackets contain:
   * an `L` if that node is the leader
-  * an `H` if that node is hosting the socket.io server (only for node.js v5.7+)
+  * an `H` if that node is hosting the socket.io server ([only for node.js
+v5.7+][http-server-url])
   * nothing otherwise
 * The second brackets indicate that node's process ID
 * The third brackets contain
   * `A#<N>` if this node is attempting to *append* the Nth entry to the log
   * `C#<N>` if this node is acknowledging the Nth commit to the log
-* The fourth brackets contain T<N>, where N is the current term number
+* The fourth brackets contain `T<N>`, where N is the current term number
 
 When a new leader is elected, the leader will announce `New leader!`.
 
@@ -59,4 +60,6 @@ message.
 
 [gaggle-url]: https://github.com/ben-ng/gaggle
 [raft-url]: https://raft.github.io/
+[http-server-url]: https://nodejs.org/api/http.html#http_server_listening
+[socket.io-url]: https://github.com/socketio/socket.io
 
