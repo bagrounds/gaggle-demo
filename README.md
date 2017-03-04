@@ -1,7 +1,7 @@
 # [gaggle-demo](https://gitlab.com/bagrounds/gaggle-demo)
 
 Demo using [gaggle][gaggle-url] (an implementation of the [Raft][raft-url]
-algorithm) and [socket.io] for a fully distributed state machine
+algorithm) and [socket.io][socket.io-url] for a fully distributed state machine
 
 # usage
 ```sh
